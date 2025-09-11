@@ -1,0 +1,1 @@
+version: 2rnupdates:rn - package-ecosystem: npmrn directory: "/"rn schedule:rn interval: weeklyrn day: sundayrn time: "01:00"rn open-pull-requests-limit: 5rn commit-message:rn prefix: "deps"rn - package-ecosystem: github-actionsrn directory: "/"rn schedule:rn interval: weeklyrn day: sundayrn time: "01:00"rn open-pull-requests-limit: 5rn commit-message:rn prefix: "ci"
