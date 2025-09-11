@@ -1,1 +1,20 @@
-version: 2rnupdates:rn - package-ecosystem: npmrn directory: "/"rn schedule:rn interval: weeklyrn day: sundayrn time: "01:00"rn open-pull-requests-limit: 5rn commit-message:rn prefix: "deps"rn - package-ecosystem: github-actionsrn directory: "/"rn schedule:rn interval: weeklyrn day: sundayrn time: "01:00"rn open-pull-requests-limit: 5rn commit-message:rn prefix: "ci"
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: sunday
+      time: "01:00"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps"
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: sunday
+      time: "01:00"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci"
