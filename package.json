@@ -1,0 +1,42 @@
+{
+  "name": "my-first-project",
+  "version": "1.0.0",
+  "description": "Mucking about",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "test:ci": "jest --ci --runInBand",
+    "test:coverage": "jest --coverage",
+    "check": "npm run format:check && npm run lint && npm run test:ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizc-au/my-first-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizc-au/my-first-project/issues"
+  },
+  "homepage": "https://github.com/lizc-au/my-first-project#readme",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "cross-env": "^10.0.0",
+    "eslint": "^9.35.0",
+    "jest": "^30.1.3",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "supertest": "^7.1.4"
+  }
+}
