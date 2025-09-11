@@ -1,1 +1,27 @@
-name: CodeQLrnon:rn push:rn branches: [ main ]rn pull_request:rn branches: [ main ]rn schedule:rn - cron: '30 1 * * 1'rnjobs:rn analyze:rn name: Analyzern runs-on: ubuntu-latestrn permissions:rn security-events: writern actions: readrn contents: readrn strategy:rn fail-fast: falsern steps:rn - uses: actions/checkout@v5rn - uses: github/codeql-action/init@v3rn with:rn languages: javascriptrn - uses: github/codeql-action/autobuild@v3rn - uses: github/codeql-action/analyze@v3rn with:rn category: '/language:javascript'
+name: CodeQL
+on:
+ push:
+ branches: [ main ]
+ pull_request:
+ branches: [ main ]
+ schedule:
+ - cron: '30 1 * * 1'
+jobs:
+ analyze:
+ name: Analyze
+ runs-on: ubuntu-latest
+ permissions:
+ security-events: write
+ actions: read
+ contents: read
+ strategy:
+ fail-fast: false
+ steps:
+ - uses: actions/checkout@v5
+ - uses: github/codeql-action/init@v3
+ with:
+ languages: javascript
+ - uses: github/codeql-action/autobuild@v3
+ - uses: github/codeql-action/analyze@v3
+ with:
+ category: '/language:javascript'
